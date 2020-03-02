@@ -1,0 +1,70 @@
+// ======================================================
+// Layout :: Header
+// ======================================================
+//
+//.header{
+//  background: $c-bl;
+//  position: fixed;
+//  width: 100%;
+//  z-index: 99;
+//  .header-top{
+//    .logo{
+//      h1{
+//        margin: 12px 0 11px;
+//        a{
+//          width: 300px;
+//          height: 50px;
+//          display: block;
+//        }
+//      }
+//    }
+//    .navigation-vsd{
+//      display: flex;
+//      align-items: center;
+//      justify-content: space-between;
+//      .menu{
+//        display: inline-block;
+//        li{
+//          float: left;
+//          position: relative;
+//          transition: all 0.3s;
+//          &.active{
+//            background: #195493;
+//          }
+//          &.active:after{
+//            content: '';
+//            transform: translateX(-50%) scaleX(1);
+//          }
+//          &:after{
+//            content: '';
+//            position: absolute;
+//            bottom: 17px;
+//            left: 50%;
+//            transform: translateX(-50%) scaleX(0);
+//            transition: all 0.3s;
+//            width: 28px;
+//            height: 4px;
+//            background: #fff;
+//            border-radius: 30px;
+//            pointer-events: none;
+//          }
+//          &:hover:after{
+//            transform: translateX(-50%) scaleX(1);
+//            transition: all 0.3s;
+//          }
+//          &:hover{
+//            background: #195493;
+//            transition: all 0.3s;
+//          }
+//          a{
+//            display: block;
+//            padding: 31px 11px 30px;
+//            color: $c-wh;
+//            font-size: 14px;
+//          }
+//        }
+//      }
+//
+//    }
+//  }
+//}
