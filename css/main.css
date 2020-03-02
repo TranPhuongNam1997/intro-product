@@ -24,7 +24,7 @@ img {
 body {
   margin: 0;
   padding: 0;
-  background: #fff;
+  background: #F8F9FA;
   font-size: 13px;
   line-height: 16px;
   font-family: "Arial"; }
@@ -69,10 +69,6 @@ html, body {
   height: 100%; }
 
 /* fade slider css*/
-#fades1 {
-  position: relative;
-  height: calc(100vh - 87px); }
-
 .fade-slide {
   background: #333;
   color: #fff; }
