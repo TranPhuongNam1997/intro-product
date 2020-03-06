@@ -10,9 +10,10 @@ body{
   margin: 0;
   padding: 0;
   background: #fff;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 16px;
-  font-family: "Arial";
+  font-family: 'SVN-Gotham Rounded';
+  color: #000;
 }
 input:focus,textarea:focus{
   //outline: none;
@@ -23,4 +24,7 @@ input:focus,textarea:focus{
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.wraper{
+  position: relative;
 }
