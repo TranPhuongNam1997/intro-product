@@ -2,74 +2,9 @@
 // Components :: Slider
 // ======================================================
 
-/* fade slider css*/
-#fades1{
-  position: relative;
+.item{
   height: 100vh;
 }
-.fade-slide {
-  //background:#333;
-  //color:#fff;
-}
-.fade-slide.fs-odd {
-  background:#000;
-}
-.fs-nav {
-  display:none;
-  width:2em;
-  height:2em;
-  border:1px solid #aaa;
-  background:#ddd;
-  line-height:2em;
-  text-align:center;
-  position:absolute;
-  top:50%;
-  margin-top:-1em;
-  border-radius:2em;
-}
-.fs-hover .fs-nav {
-  display:block;
-}
-.fs-nav-prev {
-  left:.5em;
-}
-.fs-nav-next {
-  right:.5em;
-}
-.fs-nav:hover {
-  color:#eee;
-  background:#08c;
-}
-.fs-dots {
-  position: absolute;
-  display: inline;
-  left: 75px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.fs-dots .fs-dot {
-  //display:inline-block;
-  //vertical-align:middle;
-  //margin:4px;
-  //height:14px;
-  //width:14px;
-  //border:1px solid #a3c;
-  //border-radius:60px;
-  border-radius: 30px;
-  background: #DDDDDD;
-  height: 6px;
-  width: 21px;
-  display: block;
-  margin: 5px 0;
-}
-.fs-dots .fs-on {
-  border-radius: 30px;
-  background-image: linear-gradient(to right, #4CD742 , #00389E);
-  height: 6px;
-  width: 58px;
-  display: block;
-}
-
 
 .sub-banner{
   position: absolute;
@@ -110,7 +45,7 @@
 .btn-view-more{
   position: relative;
   padding: 22px 43px;
-
+  display: inline-block;
   color: #49A040;
   background: $c-wh;
 
@@ -160,16 +95,8 @@
     color: #49A040;
   }
 }
-.coppy-right{
-  font-weight: 500;
-}
-.scroll-down{
-  transform: rotate(90deg) translateX(-54px) translateY(55px);
-  i{
-    margin-left: 22px;
-    animation: scroll-down 1s infinite;
-  }
-}
+
+
 .flex-flextend{
   display: flex;
   justify-content: space-between;
@@ -187,9 +114,12 @@
   transition: all 0.4s;
   visibility: visible!important;
   animation-name: fadeInUp!important;
-  &:hover{
-    transform: translateY(-10px);
-    transition: all 0.4s;
+  //&:hover{
+  //  transform: translateY(-10px);
+  //  transition: all 0.4s;
+  //}
+  &:focus{
+    outline: none;
   }
   .row-page{
     margin: 0;
@@ -239,4 +169,20 @@
       }
     }
   }
+}
+
+.owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next,.owl-carousel .owl-nav .owl-prev:hover, .owl-carousel .owl-nav .owl-next:hover{
+  color: #000;
+  opacity: 1;
+  font-size: 33px;
+}
+.owl-carousel .owl-nav .owl-next {
+  right: auto;
+  left: 27px;
+}
+.owl-carousel .owl-nav {
+  left: calc((100% - 1540px)/2);
+  top: 20%;
+  width: auto;
+  text-align: left;
 }

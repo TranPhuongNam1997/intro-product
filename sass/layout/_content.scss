@@ -6,19 +6,98 @@
 html,body{
   height: 100%;
 }
-main{
+section{
   height: 100vh;
 }
-
-.bg-00{
-  background: #000;
-  width: 100%;
-  height: 2000px;
-  padding-top: 100vh;
+.title-section{
+  color: #4DD53E;
+  font-family: 'UTM Avo';
+  font-weight: 700;
+  font-size: 74px;
+  text-transform: uppercase;
+  margin-bottom: 46px;
+  .txt-content-section{
+    color: #0033A1;
+  }
 }
-.bg-blue{
-  background: blue;
-  width: 100%;
-  height: 2000px;
-  padding-top: 100vh;
+.list-tag{
+  margin-bottom: 50px;
+  li{
+    font-weight: 700;
+    font-size: 16px;
+    color: #C4C4C4;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+  color: #0033A1;
+  background-color: #fff;
+  border: none;
+  &:after{
+    content: '';
+    transform: translateX(-50%) scale(1);
+    transition: all 0.4s;
+  }
+}
+.nav-tabs .nav-link{
+  position: relative;
+  border: none;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 21px 0 12px;
+  &:after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    transform: translateX(-50%) scale(0);
+    background: #4DD53E;
+    transition: all 0.4s;
+  }
+  &:hover:after{
+    content: '';
+    transform: translateX(-50%) scale(1);
+  }
+}
+.nav-tabs{
+  border-bottom: none;
+  margin-bottom: 38px;
+}
+.nav-tabs .nav-item {
+  margin-right: 50px;
+}
+
+
+.list-product{
+  max-height: 637px;
+
+  overflow: hidden;
+  overflow-y: auto;
+  /* width */
+  &::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #E8E8E8;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #0033A1;
+    border-radius: 30px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #0033A1;
+  }
+  .box-img{
+    margin-bottom: 23px;
+  }
 }

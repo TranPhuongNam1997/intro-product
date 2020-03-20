@@ -1,3 +1,22 @@
 // ======================================================
 // Layout :: Footer
 // ======================================================
+.scroll-down{
+  position: fixed;
+  bottom: 22px;
+  left: calc((100% - 1784px)/2);
+  z-index: 9;
+  transform: rotate(90deg) translateX(-54px) translateY(55px);
+  font-weight: 700;
+  i{
+    margin-left: 22px;
+    animation: scroll-down 1s infinite;
+  }
+}
+.coppy-right{
+  font-weight: 500;
+  position: fixed;
+  bottom: 22px;
+  left: calc((100% - 1540px)/2);
+  z-index: 9;
+}
