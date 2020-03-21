@@ -9,6 +9,9 @@ html,body{
 section{
   height: 100vh;
 }
+.head-left-block{
+  padding-left: 122px;
+}
 .title-section{
   color: #4DD53E;
   font-family: 'UTM Avo';
@@ -73,7 +76,7 @@ section{
 
 
 .list-product{
-  max-height: 637px;
+  max-height: 639px;
 
   overflow: hidden;
   overflow-y: auto;
@@ -85,6 +88,7 @@ section{
   /* Track */
   &::-webkit-scrollbar-track {
     background: #E8E8E8;
+    border-radius: 30px;
   }
 
   /* Handle */

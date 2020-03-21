@@ -121,6 +121,82 @@ body {
 .section {
   position: relative; }
 
+.box-product-big {
+  display: block;
+  position: relative;
+  overflow: hidden; }
+  .box-product-big:before {
+    content: '';
+    display: block;
+    padding-bottom: 163.17%; }
+  .box-product-big img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    opacity: 0.95;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale3d(1.05, 1.05, 1);
+    transform: scale3d(1.05, 1.05, 1); }
+  .box-product-big:hover img {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); }
+  .box-product-big:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 130%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    content: '';
+    display: inline-block;
+    -webkit-transition: -webkit-transform 0.6s;
+    transition: transform 0.6s;
+    -webkit-transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, -100%, 0);
+    transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, -100%, 0); }
+  .box-product-big:hover:after {
+    -webkit-transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, 100%, 0);
+    transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, 123%, 0); }
+
+.box-product-small {
+  display: block;
+  position: relative;
+  overflow: hidden; }
+  .box-product-small:before {
+    content: '';
+    display: block;
+    padding-bottom: 77.63%; }
+  .box-product-small img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    opacity: 0.95;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale3d(1.05, 1.05, 1);
+    transform: scale3d(1.05, 1.05, 1); }
+  .box-product-small:hover img {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); }
+  .box-product-small:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    content: '';
+    display: inline-block;
+    -webkit-transition: -webkit-transform 0.6s;
+    transition: transform 0.6s;
+    -webkit-transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, -100%, 0);
+    transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, -100%, 0); }
+  .box-product-small:hover:after {
+    -webkit-transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, 100%, 0);
+    transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, 123%, 0); }
+
 .container {
   max-width: 1214px;
   width: 100%;
@@ -167,6 +243,16 @@ body {
   top: 50%;
   transform: translateY(-50%); }
 
+.container-sc {
+  max-width: 1790px;
+  margin: 0 auto;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%); }
+
 .container-banner-bottom {
   max-width: 1530px;
   margin: 0 auto;
@@ -197,12 +283,25 @@ body {
   width: 33.3333%;
   float: left; }
 
+.col-list-30 {
+  padding: 0 15px;
+  flex: 0 0 30%;
+  -ms-flex: 0 0 30%;
+  max-width: 30%; }
+
+.col-list-70 {
+  padding: 0 15px;
+  flex: 0 0 70%;
+  -ms-flex: 0 0 70%;
+  max-width: 70%; }
+
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 999; }
+  z-index: 999;
+  background: #fff; }
 
 .logo {
   float: left;
@@ -275,12 +374,21 @@ nav {
         content: '';
         width: 100%;
         transform: scale(1) translateX(-50%); }
+      nav .menu li a.mPS2id-highlight {
+        color: #0033A1; }
+      nav .menu li a.mPS2id-highlight:after {
+        content: '';
+        width: 100%;
+        transform: scale(1) translateX(-50%); }
 
 html, body {
   height: 100%; }
 
 section {
   height: 100vh; }
+
+.head-left-block {
+  padding-left: 122px; }
 
 .title-section {
   color: #4DD53E;
@@ -338,7 +446,7 @@ section {
   margin-right: 50px; }
 
 .list-product {
-  max-height: 637px;
+  max-height: 639px;
   overflow: hidden;
   overflow-y: auto;
   /* width */
@@ -348,7 +456,8 @@ section {
   .list-product::-webkit-scrollbar {
     width: 7px; }
   .list-product::-webkit-scrollbar-track {
-    background: #E8E8E8; }
+    background: #E8E8E8;
+    border-radius: 30px; }
   .list-product::-webkit-scrollbar-thumb {
     background: #0033A1;
     border-radius: 30px; }
@@ -360,7 +469,7 @@ section {
 .scroll-down {
   position: fixed;
   bottom: 22px;
-  left: calc((100% - 1784px)/2);
+  left: calc((100% - 1790px)/2);
   z-index: 9;
   transform: rotate(90deg) translateX(-54px) translateY(55px);
   font-weight: 700; }
