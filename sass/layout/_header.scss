@@ -8,7 +8,6 @@ header{
   left: 0;
   width: 100%;
   z-index: 999;
-  background: #fff;
 }
 .logo{
   float: left;
@@ -52,4 +51,7 @@ header{
   margin: 46px 0 28px 45px;
   border: none;
   background: none;
+}
+html{
+  scroll-behavior: smooth;
 }

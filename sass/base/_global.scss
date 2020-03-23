@@ -75,7 +75,7 @@ input:focus,textarea:focus{
   position: relative;
   overflow: hidden;
   &:before{
-    @include resize-before(77.63%);
+    @include resize-before(78.63%);
   }
 
   img{

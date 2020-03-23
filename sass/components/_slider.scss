@@ -64,22 +64,25 @@
   &:before {
     content: '';
     position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     z-index: -1;
     margin: -1px;
     border-radius: inherit;
     background-image: linear-gradient(to right, #4FD841, #0035A0);
-    //background-image: linear-gradient(to right, #4FD841 0%, #4FD841 51%, #0035A0 100%);
+
   }
   &:hover{
     transition: all 0.3s;
     background-image: linear-gradient(to right, #4FD841, #0035A0);
-    //background-image: linear-gradient(to right, #4FD841 0%, #4FD841 51%, #0035A0 100%);
     color: $c-wh;
     i{
       color: $c-wh;
     }
   }
+
   i{
     color: #49A040;
     margin-left: 15px;

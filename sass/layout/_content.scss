@@ -80,6 +80,7 @@ section{
 
   overflow: hidden;
   overflow-y: auto;
+  padding-right: 5px;
   /* width */
   &::-webkit-scrollbar {
     width: 7px;
@@ -103,5 +104,8 @@ section{
   }
   .box-img{
     margin-bottom: 23px;
+    &:last-child{
+      margin-bottom: 0;
+    }
   }
 }

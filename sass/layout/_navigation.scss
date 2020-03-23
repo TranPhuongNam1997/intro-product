@@ -7,6 +7,16 @@ nav{
     li{
       float: left;
       margin: 28px 0 8px;
+      &.active{
+        a{
+          color: #0033A1;
+        }
+      }
+      &.active a:after{
+        content: '';
+        width: 100%;
+        transform: scale(1) translateX(-50%);
+      }
       a{
         display: block;
         font-weight: 700;
@@ -31,22 +41,6 @@ nav{
         &:hover:after{
           width: 100%;
           transition: all 0.4s;
-          transform: scale(1) translateX(-50%);
-        }
-        &.active{
-          color: #0033A1;
-        }
-        &.active:after{
-          content: '';
-          width: 100%;
-          transform: scale(1) translateX(-50%);
-        }
-        &.mPS2id-highlight{
-          color: #0033A1;
-        }
-        &.mPS2id-highlight:after{
-          content: '';
-          width: 100%;
           transform: scale(1) translateX(-50%);
         }
       }

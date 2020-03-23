@@ -166,7 +166,7 @@ body {
   .box-product-small:before {
     content: '';
     display: block;
-    padding-bottom: 77.63%; }
+    padding-bottom: 78.63%; }
   .box-product-small img {
     position: absolute;
     top: 0;
@@ -300,8 +300,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 999;
-  background: #fff; }
+  z-index: 999; }
 
 .logo {
   float: left;
@@ -341,11 +340,20 @@ header {
   border: none;
   background: none; }
 
+html {
+  scroll-behavior: smooth; }
+
 nav {
   float: left; }
   nav .menu li {
     float: left;
     margin: 28px 0 8px; }
+    nav .menu li.active a {
+      color: #0033A1; }
+    nav .menu li.active a:after {
+      content: '';
+      width: 100%;
+      transform: scale(1) translateX(-50%); }
     nav .menu li a {
       display: block;
       font-weight: 700;
@@ -367,18 +375,6 @@ nav {
       nav .menu li a:hover:after {
         width: 100%;
         transition: all 0.4s;
-        transform: scale(1) translateX(-50%); }
-      nav .menu li a.active {
-        color: #0033A1; }
-      nav .menu li a.active:after {
-        content: '';
-        width: 100%;
-        transform: scale(1) translateX(-50%); }
-      nav .menu li a.mPS2id-highlight {
-        color: #0033A1; }
-      nav .menu li a.mPS2id-highlight:after {
-        content: '';
-        width: 100%;
         transform: scale(1) translateX(-50%); }
 
 html, body {
@@ -449,6 +445,7 @@ section {
   max-height: 639px;
   overflow: hidden;
   overflow-y: auto;
+  padding-right: 5px;
   /* width */
   /* Track */
   /* Handle */
@@ -465,6 +462,8 @@ section {
     background: #0033A1; }
   .list-product .box-img {
     margin-bottom: 23px; }
+    .list-product .box-img:last-child {
+      margin-bottom: 0; }
 
 .scroll-down {
   position: fixed;

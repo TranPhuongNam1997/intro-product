@@ -16,8 +16,12 @@
 
     <script type="text/javascript" src="libs/js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="libs/js/bootstrap.min.js"></script>
-    <script src="libs/js/owl.carousel2.min.js"></script>
-    <script src="libs/js/fullpage.js"></script>
+    <script type="text/javascript" src="libs/js/owl.carousel2.min.js"></script>
+<!--    <script type="text/javascript" src="libs/js/menu-right.js"></script>-->
+<!--    <script type="text/javascript" src="libs/js/fullpage.js"></script>-->
+
+
+
     <script type="text/javascript" src="libs/js/script.js"></script>
     <script type="text/javascript" src="libs/js/wow.js"></script>
     <script>
@@ -33,12 +37,12 @@
                 <h1 class="logo"><a href="#"><img src="img/anhfreelogo-05.svg" alt="ảnh"></a></h1>
                 <div class="ultility clearfix">
                     <nav>
-                        <ul id="navigation-menu" class="menu clearfix" role="navigation">
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#product">Product</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#donate">Donate</a></li>
+                        <ul id="menux" class="menu clearfix">
+                            <li data-menuanchor="home"><a href="#home">Home</a></li>
+                            <li data-menuanchor="product"><a href="#product">Product</a></li>
+                            <li data-menuanchor="contact"><a href="#contact">Contact</a></li>
+                            <li data-menuanchor="about"><a href="#about">About</a></li>
+                            <li data-menuanchor="donate"><a href="#donate">Donate</a></li>
                         </ul>
                     </nav>
                     <a href="#" class="change-language">VI</a>
@@ -50,7 +54,7 @@
         <!--start of main =====================-->
         <main>
             <div id="fullpage">
-                <section id="home" class="section">
+                <section id="section0" class="section">
                     <div class="owl-carousel slider-main">
                         <div class="item">
                             <div class="sub-banner">
@@ -124,7 +128,7 @@
 
                 </section>
                 <!--end of section1 =====================-->
-                <section id="product" class="section">
+                <section id="section1" class="section">
                     <div class="container-sc">
                         <div class="row">
                             <div class="col-list-30">
@@ -229,11 +233,11 @@
                     </div>
                 </section>
                 <!--end of section2 =====================-->
-                <section id="contact" class="section">section3</section>
+                <section id="section2" class="section">section3</section>
                 <!--end of section3 =====================-->
-                <section id="about" class="section">section4</section>
+                <section id="section3" class="section">section4</section>
                 <!--end of section4 =====================-->
-                <section id="donate" class="section">section5</section>
+                <section id="section4" class="section">section5</section>
                 <!--end of section5 =====================-->
             </div>
         </main>
@@ -247,6 +251,8 @@
     </div>
 
     <script>
+
+
         $(function() {
 
             $(".slider-main").owlCarousel({
@@ -290,41 +296,31 @@
         });
 
         $(document).ready(function () {
+            // var myFullpage = new fullpage('#fullpage', {
+            //     menu: '#navigation-menu',
+            //     anchors: ['home','product','contact','about','donate'],
+            // });
+
+
             var owl = $('.slider-main');
             owl.owlCarousel();
             // Go to the next item
             $('.customNextBtn').click(function() {
                 owl.trigger('next.owl.carousel');
             });
-            new fullpage('#fullpage', {
-                sectionsColor: ['#fff', '#fff', '#fff', '#fff'],
-            });
-            $('.list-product').scroll(function (event) {
-                event.preventDefault();
-            })
         });
 
     </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.js"></script>
     <script>
-        (function($){
-            $(window).on("load",function(){
-
-                /* Page Scroll to id fn call */
-                $("#navigation-menu a,a[href='#top'],a[rel='m_PageScroll2id']").mPageScroll2id({
-                    highlightSelector:"#navigation-menu a"
-                });
-
-                /* demo functions */
-                $("a[rel='next']").click(function(e){
-                    e.preventDefault();
-                    var to=$(this).parent().parent("section").next().attr("id");
-                    $.mPageScroll2id("scrollTo",to);
-                });
-
+        $(document).ready(function () {
+            var myFullpage = new fullpage('#fullpage', {
+                menu: '#menux',
+                anchors: ['home','product','contact','about','donate'],
+                // continuousVertical: true
             });
-        })(jQuery);
+        });
     </script>
-
 
 </body>
 </html>
