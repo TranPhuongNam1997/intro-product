@@ -28,6 +28,7 @@
         new WOW().init();
     </script>
 
+
 </head>
 <body>
     <div class="wraper">
@@ -173,7 +174,7 @@
                                 <!-- Tab panes -->
                                 <div class="tab-content">
                                     <div id="websiteapp" class="tab-pane active">
-                                        <div class="list-product">
+                                        <div class="list-product" id="scrolldiv">
                                             <div class="row-list-pro">
                                                 <div class="col-list-4">
                                                     <div class="box-img">
@@ -185,16 +186,17 @@
                                                 </div>
                                                 <div class="col-list-4">
                                                     <div class="box-img">
-                                                        <a href="#" class="box-product-small"><img class="w-100" src="img/supply.png" alt="image"></a>
-                                                    </div>
-                                                    <div class="box-img">
                                                         <a href="#" class="box-product-small"><img class="w-100" src="img/msb.jpg" alt="image"></a>
                                                     </div>
                                                     <div class="box-img">
                                                         <a href="#" class="box-product-small"><img class="w-100" src="img/supply.png" alt="image"></a>
                                                     </div>
+
                                                     <div class="box-img">
-                                                        <a href="#" class="box-product-small"><img class="w-100" src="img/msb.jpg" alt="image"></a>
+                                                        <a href="#" class="box-product-small"><img class="w-100" src="img/stock-trading.png" alt="image"></a>
+                                                    </div>
+                                                    <div class="box-img">
+                                                        <a href="#" class="box-product-small"><img class="w-100" src="img/restaurant.jpeg" alt="image"></a>
                                                     </div>
                                                 </div>
                                                 <div class="col-list-4">
@@ -202,13 +204,14 @@
                                                         <a href="#" class="box-product-small"><img class="w-100" src="img/banahill.jpg" alt="image"></a>
                                                     </div>
                                                     <div class="box-img">
+                                                        <a href="#" class="box-product-small"><img class="w-100" src="img/golden.png" alt="image"></a>
+                                                    </div>
+
+                                                    <div class="box-img">
                                                         <a href="#" class="box-product-small"><img class="w-100" src="img/restaurant.jpeg" alt="image"></a>
                                                     </div>
                                                     <div class="box-img">
-                                                        <a href="#" class="box-product-small"><img class="w-100" src="img/banahill.jpg" alt="image"></a>
-                                                    </div>
-                                                    <div class="box-img">
-                                                        <a href="#" class="box-product-small"><img class="w-100" src="img/restaurant.jpeg" alt="image"></a>
+                                                        <a href="#" class="box-product-small"><img class="w-100" src="img/msb.jpg" alt="image"></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -244,7 +247,7 @@
         <!--end of main =====================-->
         <!--start of footer =====================-->
         <footer>
-            <div class="scroll-down">Scroll down <i class="fa fa-long-arrow-right"></i></div>
+            <a class="scroll-down" href="javascript:0;" id="moveDown">Scroll down <i class="fa fa-long-arrow-right"></i></a>
             <p class="coppy-right">© 2020 anhfree. All rights reserved.</p>
         </footer>
         <!--end of footer =====================-->
@@ -296,12 +299,6 @@
         });
 
         $(document).ready(function () {
-            // var myFullpage = new fullpage('#fullpage', {
-            //     menu: '#navigation-menu',
-            //     anchors: ['home','product','contact','about','donate'],
-            // });
-
-
             var owl = $('.slider-main');
             owl.owlCarousel();
             // Go to the next item
@@ -311,14 +308,20 @@
         });
 
     </script>
+    <script type="text/javascript" src="libs/js/scrolloverflow.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.js"></script>
+
     <script>
         $(document).ready(function () {
-            var myFullpage = new fullpage('#fullpage', {
+            new fullpage('#fullpage', {
                 menu: '#menux',
                 anchors: ['home','product','contact','about','donate'],
-                // continuousVertical: true
+                // scrollOverflow: true,
+                normalScrollElements: '#scrolldiv'
             });
+        });
+        $(document).on('click', '#moveDown', function(){
+            fullpage_api.moveSectionDown();
         });
     </script>
 

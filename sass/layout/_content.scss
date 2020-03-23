@@ -40,8 +40,8 @@ section{
   border: none;
   &:after{
     content: '';
-    transform: translateX(-50%) scale(1);
-    transition: all 0.4s;
+    transform-origin: left;
+    transform: scaleX(1);
   }
 }
 .nav-tabs .nav-link{
@@ -53,17 +53,19 @@ section{
   &:after{
     content: '';
     position: absolute;
-    left: 50%;
+    left: 0;
     bottom: 0;
     height: 2px;
     width: 100%;
-    transform: translateX(-50%) scale(0);
     background: #4DD53E;
-    transition: all 0.4s;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .75s cubic-bezier(.19,1,.22,1);
   }
   &:hover:after{
     content: '';
-    transform: translateX(-50%) scale(1);
+    transform-origin: left;
+    transform: scaleX(1);
   }
 }
 .nav-tabs{
