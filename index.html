@@ -88,6 +88,19 @@
                                         </button>
                                     </div>
                                 </div>
+                                <div class="icon-itemx icon-item1">
+                                    <img src="img/icon-animation1.png" alt="image">
+                                </div>
+                                <div class="icon-item icon-item2">
+                                    <img src="img/icon-animation2.png" alt="image">
+                                </div>
+                                <div class="icon-itemx icon-item3">
+                                    <img src="img/icon-animation3.png" alt="image">
+                                </div>
+                                <div class="icon-item icon-item4">
+                                    <img src="img/icon-animation4.png" alt="image">
+                                </div>
+
                             </div>
                             <a class="li-head ss-link" href="javascript:;" ><img src="img/banner-1.jpg" class="w-100" alt="ảnh"></a>
                         </div>
@@ -122,6 +135,19 @@
                                         </button>
                                     </div>
                                 </div>
+                                <div class="icon-itemx icon-item5">
+                                    <img src="img/icon-animation5.png" alt="image">
+                                </div>
+                                <div class="icon-item icon-item6">
+                                    <img src="img/icon-animation7.png" alt="image">
+                                </div>
+                                <div class="icon-item icon-item7">
+                                    <img src="img/icon-animation6.png" alt="image">
+                                </div>
+                                <div class="icon-itemx icon-item8">
+                                    <img src="img/icon-animation5.png" alt="image">
+                                </div>
+
                             </div>
                             <a class="li-head ss-link" href="javascript:;" ><img src="img/banner-2.jpg" class="w-100" alt="ảnh"></a>
                         </div>
@@ -324,6 +350,59 @@
             fullpage_api.moveSectionDown();
         });
     </script>
+    <script>
+        var lFollowX = 0,
+            lFollowY = 0,
+            x = 0,
+            y = 0,
+            friction = 1 / 30;
 
+        function moveBackground() {
+            x += (lFollowX - x) * friction;
+            y += (lFollowY - y) * friction;
+
+            //  translate = 'translateX(' + x + 'px, ' + y + 'px)';
+            translate = 'translateX(' + x + 'px) translateY(' + y +'px)';
+
+            $('.icon-item').css({
+                '-webit-transform': translate,
+                '-moz-transform': translate,
+                'transform': translate
+            });
+            $('.icon-itemx').css({
+                '-webit-transform': translate,
+                '-moz-transform': translate,
+                'transform': translate
+            });
+
+
+            window.requestAnimationFrame(moveBackground);
+        }
+
+        $(window).on('mousemove click', function(e) {
+
+            // var isHovered = $('.icon-item:hover').length > 0;
+            // console.log(isHovered);
+            // if(!isHovered) {
+            //     var lMouseX = Math.max(-200, Math.min(200, $(window).width() / 2 - e.clientX)),
+            //         lMouseY = Math.max(-200, Math.min(200, $(window).height() / 2 - e.clientY));
+            //
+            //     lFollowX = (20 * lMouseX) / 100;
+            //     lFollowY = (10 * lMouseY) / 100;
+            // }
+            var isHoveredx = $('.icon-itemx:hover').length > 0;
+            console.log(isHoveredx);
+            if(!isHoveredx) {
+                var lMouseXx = Math.max(-200, Math.min(200, $(window).width() / 2 - e.clientX)),
+                    lMouseYx = Math.max(-200, Math.min(200, $(window).height() / 2 - e.clientY));
+
+                lFollowX = (20 * lMouseXx) / 200;
+                lFollowY = (10 * lMouseYx) / 200;
+            }
+
+        });
+
+        moveBackground();
+    </script>
 </body>
 </html>

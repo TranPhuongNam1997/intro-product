@@ -639,4 +639,42 @@ section {
   width: auto;
   text-align: left; }
 
+.icon-item {
+  position: absolute; }
+
+.icon-itemx {
+  position: absolute; }
+
+.icon-item1 {
+  top: 69%;
+  right: 56%; }
+
+.icon-item2 {
+  top: 19%;
+  right: 50%; }
+
+.icon-item3 {
+  top: 13%;
+  right: -2%; }
+
+.icon-item4 {
+  top: 64%;
+  right: 17%; }
+
+.icon-item5 {
+  top: 75%;
+  right: 56%; }
+
+.icon-item6 {
+  top: 21%;
+  right: 46%; }
+
+.icon-item7 {
+  top: 69%;
+  right: 53%; }
+
+.icon-item8 {
+  top: 23%;
+  right: -3%; }
+
 /*# sourceMappingURL=main.css.map */
